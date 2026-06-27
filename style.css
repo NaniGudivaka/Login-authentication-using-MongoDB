@@ -201,8 +201,9 @@ p a:hover {
   min-height: 20px;
 }
 .success{
-  color: red;
-  font-size: 14px;
+  color: green;
+  font-size: 18px;
   margin-top: 10px;
+  margin-bottom: 15px;
   min-height: 20px;
 }

@@ -1,70 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
+      <div class="auth-box">
+        <div class="tech-badge">MongoDB • Mongoose</div>
 
-        <div class="auth-box">
+        <h2>Create Account</h2>
 
-            <div class="tech-badge">
-                MongoDB • Mongoose
-            </div>
+        <form>
+          <div class="input-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
 
-            <h2>Create Account</h2>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
 
-            <form>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
 
-                <div class="input-group">
-                    <label for="name">Full Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-                </div>
+          <div>
+          <p class="error" id="error-msg"></p>
+          <p class="success" id="success-msg"></p>
+          </div>
+          <button type="submit">Create Account</button>
 
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-                </div>
-
-                <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Create a password"
-                        required
-                    >
-                </div>
-
-                <button type="submit">
-                    Create Account
-                </button>
-
-                <p>
-                    Already have an account?
-                    <a href="index.html">Login</a>
-                </p>
-
-            </form>
-
-        </div>
-
+          <p>
+            Already have an account?
+            <a href="index.html">Login</a>
+          </p>
+        </form>
+      </div>
     </div>
-
-</body>
+    <script src="signup.js"></script>
+  </body>
 </html>
