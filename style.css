@@ -194,4 +194,15 @@ p a:hover {
 }
 
 
-
+.error{
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  min-height: 20px;
+}
+.success{
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  min-height: 20px;
+}

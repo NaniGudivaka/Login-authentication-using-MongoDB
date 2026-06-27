@@ -1,6 +1,8 @@
 const form = document.querySelector('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const errorMsg = document.getElementById('error-msg');
+
 
 //Dummy users dor checking 
 const users =[  {
@@ -18,6 +20,10 @@ const users =[  {
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
+
+  errorMsg.textContent = '';
+  
+
   if(email.value.trim() === '' ||
 password.value.trim() === ''){
     alert("Please fill the all fields");
@@ -29,12 +35,12 @@ password.value.trim() === ''){
     u.password === password.value.trim()
   );
   if(!loggedInUser){
-    alert('Invalid email or password');
+    errorMsg.textContent = 'Invalid email or password';
     return;
   }
 
   localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
-  alert("Login Successful!");
+
   
   window.location.href= 'dashboard.html';
 
