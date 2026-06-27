@@ -6,44 +6,60 @@
 }
 
 body {
-  background: #a1e68a;
+  background: linear-gradient(135deg,#dff8e8,#c8f0d4);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-/* .tech-badge {
+
+/* Authentication Card */
+
+.auth-box {
+  width: 430px;
+  max-width: 90%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: popup 0.4s ease;
+}
+
+/* MongoDB Badge */
+
+.tech-badge {
   display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 18px;
   background: #e8f5e9;
   color: #2e7d32;
-  padding: 6px 12px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 15px;
-} */
-.login-box {
-  background: #fff;
-  width: 360px;
-  padding: 35px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.login-box h2 {
-  text-align: center;
-  margin-bottom: 25px;
+h2 {
+  margin-bottom: 30px;
   color: #333;
 }
 
+/* Inputs */
+label{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
 .input-group {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  text-align: left;
 }
 
 .input-group label {
@@ -55,17 +71,21 @@ body {
 
 .input-group input {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .input-group input:focus {
-  border-color: #2563eb;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
 }
+
+/* Forgot Password */
+
 .forgot-password {
   text-align: right;
   margin-bottom: 20px;
@@ -73,39 +93,48 @@ body {
 
 .forgot-password a {
   text-decoration: none;
-  color: #2563eb;
+  color: #16a34a;
   font-size: 14px;
+  transition: color 0.3s;
 }
 
 .forgot-password a:hover {
-  text-decoration: underline;
+  color: #15803d;
 }
+
+/* Button */
 
 button {
   width: 100%;
   padding: 12px;
-  background: #2563eb;
-  color: white;
   border: none;
   border-radius: 6px;
+  background: #16a34a;
+  color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #1d4ed8;
+  background: #15803d;
+  transform: translateY(-2px);
 }
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Bottom Text */
 
 p {
   margin-top: 18px;
-  text-align: center;
-  font-size: 14px;
   color: #555;
+  font-size: 14px;
 }
 
 p a {
-  color: #2563eb;
+  color: #16a34a;
   text-decoration: none;
   font-weight: bold;
 }
@@ -113,9 +142,25 @@ p a {
 p a:hover {
   text-decoration: underline;
 }
+
+/* Stack */
+
 .stack {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 15px;
-    color: #535050;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Card Animation */
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
