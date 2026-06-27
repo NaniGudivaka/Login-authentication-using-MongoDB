@@ -164,3 +164,34 @@ p a:hover {
     transform: translateY(0) scale(1);
   }
 }
+
+
+
+
+/* This is for forgot-password page styling */
+
+.description {
+    margin-bottom: 22px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.bottom-text {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.bottom-text a {
+    color: #16a34a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+
+
