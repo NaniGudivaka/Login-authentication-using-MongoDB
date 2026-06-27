@@ -229,13 +229,13 @@ p a:hover {
 
   .auth-box{
     width: 100%;
-    max-width: 380px;
-    padding: 30px 24px;
+    max-width: 420px;
+    padding: 40px 30px;
     border-radius: 12px;
   }
 
   h2{
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 24px;
   }
 
