@@ -1,3 +1,7 @@
+const userName = document.getElementById('username');
+const userEmail = document.getElementById("email");
+
+
 async function loadUser() {
   try {
     const response = await fetch(
@@ -14,9 +18,11 @@ async function loadUser() {
 
     const user = await response.json();
 
-    document.getElementById('username').textContent = user.name;
+    console.log(user);
 
-    document.getElementById("email").textContent = user.email;
+    userName.textContent = user.name;
+
+    userEmail.textContent = user.email;
 
   } catch (error) {
     console.log(error);
