@@ -16,13 +16,13 @@ async function loadUser() {
       return;
     }
 
-    const user = await response.json();
+    const data = await response.json();
 
-    console.log(user);
+    console.log(data);
 
-    userName.textContent = user.name;
+    userName.textContent = data.user.name;
 
-    userEmail.textContent = user.email;
+    userEmail.textContent = data.user.email;
 
   } catch (error) {
     console.log(error);
