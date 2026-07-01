@@ -5,11 +5,16 @@ const passwordInput = document.getElementById('password');
 const errorMsg = document.getElementById('error-msg');
 const successMsg = document.getElementById('success-msg');
 
+const signupBtn = document.getElementById('signup-button');
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   errorMsg.textContent = '';
   successMsg.textContent = '';
+
+  signupBtn.disabled = true;
+  signupBtn.textContent = 'creating Account...';
 
   const name = nameInput.value.trim();
   const email = emailInput.value.trim();
@@ -50,6 +55,8 @@ form.addEventListener('submit', async (e) => {
 
   }catch(error){
     errorMsg.textContent = 'Something went wrong. Please try again..';
+    signupBtn.disabled = false;
+    signupBtn.textContent = 'Create Account';
     console.log(error);
 
   }

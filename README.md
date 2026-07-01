@@ -29,4 +29,4 @@ This project connects to the authentication backend API.
 
 ## Author
 
-Nani Gudivaka
+## Nani Gudivaka ##
